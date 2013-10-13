@@ -90,7 +90,8 @@ nnoremap <leader>w <C-o>
 
 " Command-T
 noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR>
+noremap <leader>m <Esc>:CommandTBuffer<CR
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg
 
 "remember last login cursor
 set viminfo='10,\"100,:20,%,n~/.viminfo
@@ -139,3 +140,4 @@ nmap <silent><Leader>f <Esc>:Pytest file<CR>
 let Tlist_Use_Right_Window = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 noremap <leader>l <ESC>:TlistToggle<CR>
+
