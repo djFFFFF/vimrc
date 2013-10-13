@@ -17,6 +17,8 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/powerline'
 Bundle 'wincent/Command-T'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle 'alfredodeza/pytest.vim'
 
 colorscheme pychimp
 
@@ -116,3 +118,11 @@ set foldlevel=99
 "move faster through buffers
 map <S-right> <ESC>:bn<CR>
 map <S-left> <ESC>:bp<CR>
+
+" NumberToggle
+let g:NumberToggleTrigger="<F2>"
+
+" Pytest, only file test needed currently
+nmap <silent><Leader>f <Esc>:Pytest file<CR>
+"nmap <silent><Leader>c <Esc>:Pytest class<CR>
+"nmap <silent><Leader>m <Esc>:Pytest method<CR>
