@@ -12,6 +12,7 @@ Bundle 'gmarik/vundle'
 " my bundles
 Bundle 'scrooloose/nerdtree'
 Bundle 'kevinw/pyflakes-vim'
+Bundle 'hdima/python-syntax'
 
 colorscheme pychimp
 
@@ -43,7 +44,7 @@ hi CursorLine   cterm=bold ctermbg=235
 hi CursorColumn cterm=bold ctermbg=235
 
 " ,ee打开vim配置文件
-map <silent> <leader>ee :e ~/.vimrc<CR>
+map <silent> <leader>ee :e ~/.vim/vimrc<CR>
 
 " 区域间切换
 nnoremap <C-h> <C-w>h
@@ -61,3 +62,6 @@ let NERDTreeIgnore = ['\.pyc', '\.git', '\.hg', '\.svn', 'tags']  " 不在NERDTr
 
 " pyflakes
 hi SpellBad term=reverse ctermbg=1
+
+" python-syntax
+let python_highlight_all = 1
