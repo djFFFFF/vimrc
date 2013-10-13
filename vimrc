@@ -71,3 +71,7 @@ let python_highlight_all = 1
 
 " powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+" YouCompleteMe
+nnoremap <leader>q :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>w <C-o>
