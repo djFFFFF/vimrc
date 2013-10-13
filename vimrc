@@ -19,6 +19,8 @@ Bundle 'Lokaltog/powerline'
 Bundle 'wincent/Command-T'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'alfredodeza/pytest.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'taglist.vim'
 
 colorscheme pychimp
 
@@ -27,6 +29,7 @@ set number                    " 默认显示行号
 
 set expandtab                 " 把所有输入的tab转换成空格
 set tabstop=4                 " 1tab=4空格
+set softtabstop=4             " 退格删除缩进
 set shiftwidth=4              " 设置缩进为4空格
 set backspace=indent,eol,start  " fix backspace not working
 
@@ -37,7 +40,12 @@ set smarttab                  " 根据shiftwidth设置缩进
 set mouse=a                   " 开启鼠标模式
 set history=100               " 最大 历史操作记录数
 
+set showmatch
+set hlsearch
+set title
+
 let mapleader=","             " 将','绑定为leader键
+nnoremap ; :
 
 syntax on                     " 开启语法高亮
 filetype on
@@ -126,3 +134,8 @@ let g:NumberToggleTrigger="<F2>"
 nmap <silent><Leader>f <Esc>:Pytest file<CR>
 "nmap <silent><Leader>c <Esc>:Pytest class<CR>
 "nmap <silent><Leader>m <Esc>:Pytest method<CR>
+
+" taglist
+let Tlist_Use_Right_Window = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+noremap <leader>l <ESC>:TlistToggle<CR>
