@@ -14,6 +14,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'hdima/python-syntax'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/powerline'
 
 colorscheme pychimp
 
@@ -66,3 +68,6 @@ hi SpellBad term=reverse ctermbg=1
 
 " python-syntax
 let python_highlight_all = 1
+
+" powerline
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
