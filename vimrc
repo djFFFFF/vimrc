@@ -9,6 +9,9 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+" my bundles
+Bundle 'scrooloose/nerdtree'
+
 set lines=45 columns=150      " 设置vim工作区大小
 set number                    " 默认显示行号
 
@@ -44,4 +47,12 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" NERDTree
+map <F1> :NERDTreeToggle<CR>
+au VimEnter * NERDTree          " 自动开启NERDTree
+au VimEnter * wincmd p          " 文件自动获取焦点
+let NERDTreeDirArrows=1         " 箭头美化
+let NERDTreeWinSize=31          " 窗口大小
+let NERDTreeIgnore = ['\.pyc', '\.git', '\.hg', '\.svn', 'tags']  " 不在NERDTree中显示这些文件
 
