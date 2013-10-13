@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 
 " my bundles
 Bundle 'scrooloose/nerdtree'
+Bundle 'kevinw/pyflakes-vim'
 
 set lines=45 columns=150      " 设置vim工作区大小
 set number                    " 默认显示行号
@@ -56,3 +57,5 @@ let NERDTreeDirArrows=1         " 箭头美化
 let NERDTreeWinSize=31          " 窗口大小
 let NERDTreeIgnore = ['\.pyc', '\.git', '\.hg', '\.svn', 'tags']  " 不在NERDTree中显示这些文件
 
+" pyflakes
+hi SpellBad term=reverse ctermbg=1
