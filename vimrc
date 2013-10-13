@@ -82,3 +82,37 @@ nnoremap <leader>w <C-o>
 noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>m <Esc>:CommandTBuffer<CR>
 
+"remember last login cursor
+set viminfo='10,\"100,:20,%,n~/.viminfo
+
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
+"highlight chars after col 80
+let &colorcolumn=join(range(81,999),",")
+hi ColorColumn ctermbg=235
+
+"higglight extra TAB and spaces
+set list
+set listchars=tab:»·,trail:·
+
+"highlight current word under cursor
+autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+hi IncSearch ctermbg=240
+
+"use za to fold/unfold code
+set foldmethod=indent
+set foldlevel=99
+
+"move faster through buffers
+map <S-right> <ESC>:bn<CR>
+map <S-left> <ESC>:bp<CR>
