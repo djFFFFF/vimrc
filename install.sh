@@ -18,3 +18,7 @@ make ycm_core
 cd ~
 rm -rf ~/ycm_build
 
+cd ~/.vim/bundle/Command-T/ruby/command-t
+ruby extconf.rb
+make
+

@@ -16,6 +16,7 @@ Bundle 'hdima/python-syntax'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/powerline'
+Bundle 'wincent/Command-T'
 
 colorscheme pychimp
 
@@ -25,6 +26,7 @@ set number                    " 默认显示行号
 set expandtab                 " 把所有输入的tab转换成空格
 set tabstop=4                 " 1tab=4空格
 set shiftwidth=4              " 设置缩进为4空格
+set backspace=indent,eol,start  " fix backspace not working
 
 set autoindent                " 自动缩进, 开始新行时自动复制上一行的缩进
 set smartindent               " 智能缩进
@@ -75,3 +77,8 @@ set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 " YouCompleteMe
 nnoremap <leader>q :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>w <C-o>
+
+" Command-T
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>m <Esc>:CommandTBuffer<CR>
+
