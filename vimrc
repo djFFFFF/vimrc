@@ -13,6 +13,8 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kevinw/pyflakes-vim'
 
+colorscheme pychimp
+
 set lines=45 columns=150      " 设置vim工作区大小
 set number                    " 默认显示行号
 
