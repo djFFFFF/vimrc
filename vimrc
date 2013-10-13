@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'hdima/python-syntax'
+Bundle 'Valloric/YouCompleteMe'
 
 colorscheme pychimp
 
