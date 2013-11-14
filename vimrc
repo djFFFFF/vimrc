@@ -17,7 +17,6 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/powerline'
 Bundle 'wincent/Command-T'
-Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 Bundle 'alfredodeza/pytest.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'taglist.vim'
@@ -25,7 +24,8 @@ Bundle 'taglist.vim'
 colorscheme pychimp
 
 set lines=45 columns=150      " 设置vim工作区大小
-set number                    " 默认显示行号
+set number
+set relativenumber            " 默认显示行号
 
 set expandtab                 " 把所有输入的tab转换成空格
 set tabstop=4                 " 1tab=4空格
@@ -90,7 +90,7 @@ nnoremap <leader>w <C-o>
 
 " Command-T
 noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR
+noremap <leader>m <Esc>:CommandTBuffer<CR>
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg
 
 "remember last login cursor
@@ -127,9 +127,6 @@ set foldlevel=99
 "move faster through buffers
 map <S-right> <ESC>:bn<CR>
 map <S-left> <ESC>:bp<CR>
-
-" NumberToggle
-let g:NumberToggleTrigger="<F2>"
 
 " Pytest, only file test needed currently
 nmap <silent><Leader>f <Esc>:Pytest file<CR>
